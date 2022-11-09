@@ -10,17 +10,19 @@ function scr_cofffeeDrink() {
         coffeeDrinked += 1;
     
         //Dizendo em qual café estou
-        console.log(`Bebendo o ${coffeeDrinked}º Café`)
-        console.log('Pegando mais café')
-        console.log('')
+        console.log(`Bebendo o ${coffeeDrinked}º Café`);
+        if (refil != 1) {
+            console.log('Pegando mais café');
+        }
+        console.log('');
     
         //Se o refil chegar a um, ele escreve que acabou o café
         if (refil == 1) {
-            console.log(`O café acabou.`)
-            console.log(`Preparando mais uma rodada de café.`)
+            console.log(`O café acabou.`);
+            console.log(`Preparando mais uma rodada de café.`);
 
             //Chamando a função novamente para beber café para sempree
-            scr_cofffeeDrink()
+            scr_cofffeeDrink();
         }
     }
 }
