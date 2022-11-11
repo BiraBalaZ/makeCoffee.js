@@ -7,20 +7,20 @@ console.log("| |    / _ \\|  _|  _/ _ \\/ _ \\  \\___ \\|  _ \\ / _ \\|  _ \\");
 console.log("| |___| (_) | | | ||  __/  __/  ____) | | | | (_) | |_) |       ");
 console.log("\\______\\___/|_| |_| \\___|\\___| |_____/|_| |_|\\___/| .__/   ");
 console.log("                                                  | |           ");
-console.log("       [Horário de funcionamento: 08h às 18h]     |_|           \n\n");
+console.log("       [Horário de funcionamento: 08h às 18h]     |_|       \n\n");
 
 function scr_drinkCoffee() {
 
     //Variáveis para descobrir a hora do usuário
-    var hour = new Date().getHours();
+    var day = new Date();
+        hour = day.getHours();
 
     //O programa só funciona das 8h às 18h
     if (hour >= 8 && hour <= 18) {
 
-        //Contagem de cafés tomados, inicia com 0
         var coffeeDrinked = 0;
             maxCoffees = 10;
-            coffeesToDrink = prompt(`Digite aqui a quantidade de cafés (de 1 a ${maxCoffees}) que deseja beber: `);
+            coffeesToDrink = prompt(`Digite aqui a quantidade de cafés (de 1 a ${maxCoffees}) que deseja beber `);
         
         //Se a quantidade de cafés for maios que a quantidade máxima, 
         //a seguinte mensagem será exibida e será preparada a quantidade maxima de cafés.
@@ -45,7 +45,7 @@ function scr_drinkCoffee() {
             console.log('    <_____________> ___   ');
             console.log('    |             |/ _ \\ ');
             console.log('    |             | | | | ');
-            console.log(`    |      ${coffeeDrinked}      | | | | `);
+            console.log(`    |      ${coffeeDrinked}      | |_| | `);
             console.log(' ___|             |\\___/ ');
             console.log('/    \\___________/    \\ ');
             console.log('\\_____________________/  \n');
@@ -63,7 +63,6 @@ function scr_drinkCoffee() {
         }
     }
     else {
-
         //Se estiver fora do horário de atendimento, ele dá as seguintes mensagens:
         console.log('Estamos Fechados, volte amanhã.');
         console.log('[Horário de funcionamento: 08h às 18h]');
