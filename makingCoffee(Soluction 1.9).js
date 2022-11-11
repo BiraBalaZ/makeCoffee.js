@@ -12,16 +12,15 @@ console.log("       [Horário de funcionamento: 08h às 18h]     |_|           \
 function scr_drinkCoffee() {
 
     //Variáveis para descobrir a hora do usuário
-    var day = new Date();
-    var hour = day.getHours();
+    var hour = new Date().getHours();
 
     //O programa só funciona das 8h às 18h
     if (hour >= 8 && hour <= 18) {
 
         //Contagem de cafés tomados, inicia com 0
         var coffeeDrinked = 0;
-        var maxCoffees = 10;
-        var coffeesToDrink = prompt(`Digite aqui a quantidade de cafés (de 1 a ${maxCoffees}) que deseja beber: `);
+            maxCoffees = 10;
+            coffeesToDrink = prompt(`Digite aqui a quantidade de cafés (de 1 a ${maxCoffees}) que deseja beber: `);
         
         //Se a quantidade de cafés for maios que a quantidade máxima, 
         //a seguinte mensagem será exibida e será preparada a quantidade maxima de cafés.
